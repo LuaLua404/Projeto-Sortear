@@ -1,10 +1,13 @@
-function generateNumber(){
-const entre = Math.ceil(document.querySelector(".entre").value)
-const e = Math.floor(document.querySelector(".e").value)
+function generateNumber() {
+    const min = Math.ceil(document.querySelector(".entre").value);
+    const max = Math.floor(document.querySelector(".e").value);
 
-const result = Math.floor(Math.random()*(max - min + 1)) + min;
-
-alert(result)
+    if (min >= max) {
+        alert('O valor mínimo tem que ser MENOR que o valor máximo');
+    } else {
+        const result = Math.floor(Math.random() * (max - min + 1)) + min;
+        alert(result);
+    }
 }
 
 
